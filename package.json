@@ -34,5 +34,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@hookform/resolvers": "^2.7.0",
+    "react-hook-form": "^7.12.2",
+    "yup": "^0.32.9"
   }
 }
