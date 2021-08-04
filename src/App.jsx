@@ -3,6 +3,7 @@ import './App.css';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import Form from './components/Form';
 
 function App() {
   const validationSchema = Yup.object().shape({
@@ -34,9 +35,15 @@ function App() {
     console.log(data);
   };
 
+  const demoValue = {
+    firstName: 'Jason',
+    lastName: 'Tran',
+    address: 'HY',
+  };
+
   return (
-    <div className="register-form">
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="form">
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
           <label>Full Name</label>
           <input
@@ -100,7 +107,9 @@ function App() {
             Reset
           </button>
         </div>
-      </form>
+      </form> */}
+
+      <Form demoValue={demoValue}></Form>
     </div>
   );
 }
